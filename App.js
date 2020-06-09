@@ -110,7 +110,7 @@ class App extends Component {
           var origenLatitud = parseFloat(origenLat);  //PASADO A NUMEROS
           var origenLongitud = parseFloat(origenLng); //PASADO A NUMEROS
     
-          fetch( `https://maps.googleapis.com/maps/api/geocode/json?latlng=${origenLatitud},${origenLongitud}&key=AIzaSyDnUW5zZvdg6NSAv_h40saS0ETKWawZldk`)
+          fetch( `https://maps.googleapis.com/maps/api/geocode/json?latlng=${origenLatitud},${origenLongitud}&key=YOUR API KEY`)
             
           .then((response) => {
                   return  response.json();
@@ -322,7 +322,7 @@ obtenerLugares(){
     var longitud = parseFloat(lng); //PASADO A NUMEROS
 
 //GENERAMOS JSON CON PARAMETROS DE BUSQUEDA LUGARES CERCANOS
-fetch( `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitud},${longitud}&radius=5000&type=${type}&key=AIzaSyDnUW5zZvdg6NSAv_h40saS0ETKWawZldk`)
+fetch( `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitud},${longitud}&radius=5000&type=${type}&key=YOUR API KEY`)
         
 
 .then((response) => {
@@ -351,7 +351,7 @@ fetch( `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${
               
               var conFotos = (this.state.photos.filter(photos => typeof this.state.photos !== "undefined"  ))
               var html= conFotos[0].photo_reference
-              picture= `https://maps.googleapis.com/maps/api/place/photo?maxwidth=160&maxHeight=120&photoreference=${html}&key=AIzaSyDnUW5zZvdg6NSAv_h40saS0ETKWawZldk`;
+              picture= `https://maps.googleapis.com/maps/api/place/photo?maxwidth=160&maxHeight=120&photoreference=${html}&key=YOUR API KEY`;
               
             }else{ 
               
