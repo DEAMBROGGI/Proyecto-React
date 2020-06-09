@@ -10,7 +10,7 @@ export default class FB_Login extends Component {
   iniciarFB = () => {
     window.fbAsyncInit = function() {
         window.FB.init({
-          appId      : '2914562695259514',
+          appId      : 'YOUR API KEY',
           cookie     : true,
           xfbml      : true,
           version    : 'v3.1'
@@ -25,7 +25,7 @@ export default class FB_Login extends Component {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v6.0&appId=2914562695259514&autoLogAppEvents=1";
+        js.src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v6.0&appId=YOUR API KEY&autoLogAppEvents=1";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     document.addEventListener('FBListo', this.fbLoginStatus);
